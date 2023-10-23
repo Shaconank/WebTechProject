@@ -1,11 +1,17 @@
 
 .containerHome {
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 .filterControl{
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  
+  margin-top: 2%;
+}
+.headerWrapper{
+  width: 100%;
+  position: fixed;
 }

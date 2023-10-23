@@ -2,12 +2,13 @@
 .container {
     display: flex;
     flex-direction: row;
-    min-height: 8%;
+    max-height:100px;
     width: 100%;
     align-items: center;
     position: relative; /* Set a relative position */
     border-bottom: rgba(0, 0, 0, 0.1) solid;
     border-width: 0.5px;
+    
   }
 
 .CompanyContainer {
