@@ -1,6 +1,6 @@
 
 .containerHome {
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -10,8 +10,78 @@
   justify-content: flex-start;
   width: 100%;
   margin-top: 2%;
+  align-items: center;
 }
 .headerWrapper{
   width: 100%;
   position: fixed;
+}
+.filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0,0,0,0.2);
+  position: relative;
+  left: 4%
+}
+.filtersText{
+  font-family: 'AirBnBM';
+  font-size: 12px;
+  position: relative; 
+  bottom: 2px;
+  left: 3px;
+  
+}
+.filterIcon{
+  position: relative;
+  right: 7px
+}
+.Taxes{
+  position: relative;
+  left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.5px solid rgba(0,0,0,0.2);
+  height: 50px;
+  width: 200px;
+  padding-inline: 20px;
+  border-radius: 10px;
+
+}
+.switch {
+  width: 45px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  left:10px;
+}
+
+.slider {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+.switch.on{
+  background-color: black;
+}
+.slider.on {
+  transform: translateX(100%);
+}
+
+
+@font-face {
+  font-family: AirBnBM;
+  src: url('../../fonts/AirbnbCereal_W_Md.otf');
 }

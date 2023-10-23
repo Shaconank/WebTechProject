@@ -3,9 +3,11 @@ import './Home.css';
 import Header from "../components/Header/Header";
 import MultiItemCarousel from "../components/Carousel/Carousel";
 import FilterItem from "../components/FilterItem/FilterItem";
+import { OptionsOutline } from "react-ionicons";
 
 export default function Home() {
   const [marginTop, setMarginTop] = useState("2%");
+  const [isSwitchOn, setIsSwitchOn] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -23,6 +25,10 @@ export default function Home() {
     }
   };
 
+  const toggleSwitch = () => {
+    setIsSwitchOn(!isSwitchOn);
+  };
+
   const filterControlStyle = {
     marginTop,
     transition: "margin-top 0.3s ease"
@@ -34,6 +40,16 @@ export default function Home() {
         <Header />
         <div className="filterControl" style={filterControlStyle}>
           <MultiItemCarousel />
+          <div className="filter">
+            <OptionsOutline height={'25px'} width={'25px'} className="filterIcon" />
+            <h className="filtersText">Filters</h>
+          </div>
+          <div className="Taxes">
+            <h className="filtersText">Display total before taxes</h>
+            <div className={`switch ${isSwitchOn ? 'on' : 'off'}`} onClick={toggleSwitch}>
+              <div className={`slider ${isSwitchOn ? 'on' : 'off'}`}></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
