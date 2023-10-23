@@ -1,0 +1,122 @@
+
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 8%;
+    width: 100%;
+    align-items: center;
+    position: relative; /* Set a relative position */
+    border-bottom: rgba(0, 0, 0, 0.1) solid;
+    border-width: 0.5px;
+  }
+
+.CompanyContainer {
+    position : relative;
+    left: 50px;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    object-fit: contain;
+    align-items: center;
+    
+    
+}
+
+.LogoImage {
+    width: 30px; 
+    height: auto; 
+    
+}
+
+.CompanyText{
+    color: black;
+    font-size: large;
+    font-family: 'AirBnB';
+    color: #FF5A5F;
+    font-weight: bold;
+    font-size: 150%;
+    
+}
+.Nav {
+    margin-left: 27%;
+    height: 50%;
+    width: 25%;
+    padding: 0.3%;
+    padding-left: 2%;
+    border-radius: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle elevation and shadow */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    border: solid black;
+    border-width: 0.05px ;
+    border-color: rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+
+.Nav h {
+    text-wrap:nowrap;
+}
+.line {
+    width: 1px;
+    height: 30px;
+    background-color: black;
+    opacity: 0.1;
+}
+.NavSearch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.anywhere{
+    
+    font-family: 'AirBnBM';
+}
+.anyweek{
+    font-family: 'AirBnBM';
+}
+.AddGuests{
+    font-family:'AirBnBM' ;
+    opacity: 0.5;
+    position: relative;
+    right: 15px;
+}
+.PostHome{
+    font-family: 'AirBnBM';
+    font-size: 14px;
+    position: relative;
+    left: 10%;
+}
+.globe{
+    position: relative;
+    left: 12%
+}
+.userContainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 15%;
+    padding: 0.5%;
+    border-radius: 30px;
+    
+    justify-content: space-between;
+    min-width: 70px;
+    border: solid black;
+    border-width: 0.05px ;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+    font-family: AirBnB;
+    src: url('../../fonts/AirbnbCereal_W_Bd.otf');
+}
+@font-face {
+    font-family: AirBnBM;
+    src: url('../../fonts/AirbnbCereal_W_Md.otf');
+}

@@ -1,0 +1,11 @@
+
+.containerHome {
+  height: 100vh;
+  width: 100vw;
+}
+.filterControl{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  
+}

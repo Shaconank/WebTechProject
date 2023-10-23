@@ -1,0 +1,26 @@
+.filterItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 80px;
+    
+}
+.filterImage{
+    max-width: 35%;
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove any extra space beneath the image */
+    margin: 0 auto;
+    margin-bottom: 10px;
+    opacity: 100%;
+}
+.filterText{
+    font-family: 'AirM';
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: 'AirM';
+    src: url('../../fonts/AirbnbCereal_W_Md.otf');
+}
