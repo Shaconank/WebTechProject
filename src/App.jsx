@@ -1,10 +1,26 @@
-import React from 'react'
+import * as React from 'react'
 import Home from './screens/Home'
 import './App.css'
-export default function App() {
-  return (
-    <div class = 'page'>
-      <Home/>
-    </div>
+import * as ReactDOM from "react-dom/client"
+import {createBrowserRouter,RouterProvider } from 'react-router-dom';
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element:<Home/>
+  }
+])
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
+
+/* export default function App(){
+
+  return(
+    <Home/>
   )
-}
+} */
+

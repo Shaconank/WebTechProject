@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import './Home.css';
 import Header from "../components/Header/Header";
 import MultiItemCarousel from "../components/Carousel/Carousel";
-import FilterItem from "../components/FilterItem/FilterItem";
 import { OptionsOutline } from "react-ionicons";
+import Listings from "../components/Listings/Listings";
 
 export default function Home() {
   const [marginTop, setMarginTop] = useState("2%");
@@ -51,7 +51,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </div>
+        <div className="ListingDiv">
+          <Listings/>
+        </div>
     </div>
   );
 }

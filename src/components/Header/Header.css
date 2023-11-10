@@ -1,9 +1,11 @@
-
+body{
+    margin: 0px;
+}
 .container {
     display: flex;
     flex-direction: row;
     max-height:100px;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     position: relative; /* Set a relative position */
     border-bottom: rgba(0, 0, 0, 0.1) solid;

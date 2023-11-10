@@ -1,8 +1,8 @@
 
 .containerHome {
-  height: 200vh;
-  width: 100vw;
-  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
   flex-direction: column;
 }
 .filterControl{
@@ -15,6 +15,8 @@
 .headerWrapper{
   width: 100%;
   position: fixed;
+  z-index: 10;
+  background-color: white;
 }
 .filter{
   display: flex;
@@ -80,7 +82,11 @@
   transform: translateX(100%);
 }
 
-
+.ListingDiv{
+  display: inline-block;
+  position: relative;
+  top: 200px;
+}
 @font-face {
   font-family: AirBnBM;
   src: url('../../fonts/AirbnbCereal_W_Md.otf');

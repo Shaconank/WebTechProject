@@ -1,0 +1,99 @@
+.listings-container{
+  display: flex;
+  flex-direction: column;
+}
+.ListingsText{
+  position: relative;
+  left: 65px;
+  top: 8px;
+}
+.localityText{
+  font-family: 'AirBnBM';
+  font-size: 14px;
+}
+.distanceText{
+  font-family: 'AirBnBL';
+  font-size: 14px;
+}
+.datesText{
+  font-family: 'AirBnBL';
+  font-size: 14px;
+}
+.priceText{
+  font-family: 'AirBnBL';
+  font-size: 14px;
+  white-space: nowrap;
+}
+.priceNumber{
+  font-family: 'AirBnBM';
+}
+.priceNumber, .nightText {
+  /* Display them as inline elements */
+  display: inline;
+}
+.carousel-container{
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 60px;
+    
+    position: relative;
+}
+.CarouselImage{
+    height: 300px;
+    border-radius: 15px;
+    max-width: 100%;
+}
+/* Custom styles for the left arrow (previous) */
+.customarrowleft {
+  display: none; /* Hide by default */
+  position: absolute; /* Position it absolutely within the parent container */
+  top: 135px; /* Adjust top position as needed */
+  opacity: 50%;
+  left: 260px; /* Adjust left position as needed */
+  z-index: 1;
+}
+
+/* Custom styles for the right arrow (next) */
+.customarrowright {
+  display: none; /* Hide by default */
+  position: absolute; /* Position it absolutely within the parent container */
+  top: 135px; /* Adjust top position as needed */
+  right: 260px; /* Adjust right position as needed */
+  opacity: 50%;
+  z-index: 1;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 10px; /* Adjust this value to position the dots vertically */
+  width: 100%; /* Make the dots take the full width of the container */
+  display: flex;
+  justify-content: center; /* Center the dots horizontally */
+  
+}
+.slick-dots li button:before {
+  color: white;
+}
+.slick-dots li.slick-active button:before {
+  color: white;
+  font-size: 10px;
+}
+
+/* Show the buttons when the parent is being hovered */
+.carousel-container:hover .customarrowleft,
+.carousel-container:hover .customarrowright {
+  display: block;
+}
+
+@font-face {
+  font-family: AirBnBM;
+  src: url('../../fonts/AirbnbCereal_W_Md.otf');
+}
+@font-face {
+  font-family: AirBnB;
+  src: url('../../fonts/AirbnbCereal_W_Bd.otf');
+}
+@font-face {
+  font-family: AirBnBL;
+  src: url('../../fonts/AirbnbCereal_W_Lt.otf');
+}

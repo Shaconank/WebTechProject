@@ -1,0 +1,45 @@
+.container-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 99vh;
+    min-width: 99vw;
+    overflow: hidden;
+}
+
+#error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 50vh;
+    background-color: #f2f2f2;
+    text-align: center;
+    background-color: black;
+  }
+  
+  #error-page h1 {
+    font-size: 36px;
+    color: #FF5733; /* Change to your desired text color */
+  }
+  
+  #error-page p {
+    font-size: 20px;
+    margin: 10px;
+    color: #333; /* Change to your desired text color */
+  }
+  
+  #error-page i {
+    color: #FF5733; /* Change to your desired text color */
+  }
+  
+  /* Optional: Add a border and padding to the container */
+  #error-page {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
