@@ -1,0 +1,371 @@
+.ListingPageContainer{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.imageContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    border-radius: 13px;
+    overflow: hidden;
+    align-self: center;
+    width: 75%;
+    height: 50vh;
+    
+}
+.bodyCode{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.image1{
+    width:50%;
+    height:100%;
+    margin-right: 1.25%;
+}
+.image2,
+.image3,
+.image4,
+.image5{
+    height: 96.75%;
+    width:48.75%
+}
+.image2,
+.image4{
+    margin-right: 2.5%;
+}
+.imageRow1{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+    align-items: flex-start;
+}
+.imageRow2{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.houseName{
+    font-family: 'AirBnBM';
+    font-size: 34px;
+    position: relative;
+    left: 12.5%;
+    padding-top: 1%;
+}
+.smallPics{
+    height: 50%;
+    width: 50%;
+}
+
+.specification{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    margin-top: 1%;
+}
+.specText{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 1.5%
+    
+}
+.nameRating {
+    display: flex;
+    flex-direction: column;
+    font-family: 'AirBnB';
+    position: relative;
+    left: 20%;
+    /* Add the following styles for the line at the bottom */
+    margin-bottom: 20px; /* Adjust this value to control the distance between the content and the line */
+}
+
+.nameRating::after {
+    content: '';
+    display: block;
+    height: 1px; /* Adjust the thickness of the line */
+    width: 75%; /* Adjust the width of the line */
+    background-color: #000; /* Adjust the color of the line */
+    margin-top: 25px; /* Push the line to the bottom of the container */
+    opacity: 0.2;
+}
+
+.ListingType{
+    font-size: 28px;
+}
+.amenityList{
+    font-family: 'AirBnBL';
+    opacity: 0.6;
+}
+.listingRating{
+    font-family: 'AirBnBM';
+    font-size: 17px;
+    margin-top: 1%;
+}
+.listingHost {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 19%;
+    margin-bottom:50px ;
+    /* Add the following styles for the line at the bottom */
+    position: relative;
+}
+
+.listingHost::after{
+    content: '';
+    display: block;
+    width: 75%; /* Adjust the width of the line */
+    height: 1px; /* Adjust the thickness of the line */
+    background-color: #000; /* Adjust the color of the line */
+    position: absolute;
+    top: 70px;
+    left: 1%;
+    opacity: 0.2;
+    
+}
+
+
+
+.listingHostText{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 2.5%;
+    top: 10%;
+}
+.hostName{
+    font-family: 'AirBnBM';
+    position: relative;
+    margin-bottom: 5px;
+}
+.superHostTimer{
+    font-family: 'AirBnBL';
+    font-size: 14px;
+}
+.coolAmenities{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20%;
+}
+.coolAmenities::after {
+    content: '';
+    display: block;
+    height: 1px; /* Adjust the thickness of the line */
+    width: 75%; /* Adjust the width of the line */
+    background-color: #000; /* Adjust the color of the line */
+    margin-top: 10px; /* Push the line to the bottom of the container */
+    opacity: 0.2;
+    margin-bottom: 30px;
+}
+.SelfCheckIn,
+.SuperHost,
+.DiveRightIn{
+    display: flex;
+    margin-bottom: 20px  ;
+}
+.AmenityText{
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 3.5%;
+    top: 10%;
+}
+.listingDescription{
+    width: 65%;
+    position: relative;
+    left: 20%;
+    font-family: 'AirBnBL';
+}
+.listingDescription::after {
+    content: '';
+    display: block;
+    height: 1px; /* Adjust the thickness of the line */
+    width: 116%; /* Adjust the width of the line */
+    background-color: #000; /* Adjust the color of the line */
+    margin-top: 30px; /* Push the line to the bottom of the container */
+    opacity: 0.2;
+    margin-bottom: 30px;
+}
+
+
+
+.paymentContainer{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paymentBox{
+    position: relative;
+    top: 16%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height: 400px;
+    width: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: solid rgba(0, 0, 0, .08);
+}
+.paymentPrice{
+    position: relative;
+    margin: 5%;
+}
+.priceNumberer,
+.priceNight{
+    display: inline;
+}
+
+.priceNumberer{
+    font-size: 25px;
+    font-family: 'AirBnBM';
+    margin-left: 5%;
+}
+.priceNight{
+    font-family: 'AirBnBL';
+    margin-left: 3%;
+}
+.paymentDates{
+    height: 30%;
+    width: 80%;
+    align-self: center;
+    border-radius: 10px;
+    border: solid rgba(0, 0, 0,.4) 1px;
+    z-index: 4;
+    overflow: hidden;
+}
+.checkinDates{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    border-bottom:  solid rgba(0, 0, 0,1) 1px;
+    z-index: 100;
+}
+#checkInDateVal,
+#checkOutDateVal{
+    border: none;
+    font-family: 'AirBnBL';
+    font-size: 18px;
+    width: 93%;
+    height: 50%;
+    text-align: center;
+    
+}
+#checkInDateVal{
+    border-top: 0;
+    border-left: 0;
+}
+#checkOutDateVal{
+    border-top: 0;
+    border-right: 0;
+}
+.inText{
+    position: relative;
+    height: 25%;
+    text-align: center;
+    right: 1.75vw;
+    bottom: 10%;
+    font-family: 'AirBnBM';
+}
+.outText{
+    position: relative;
+    height: 25%;
+    text-align: center;
+    right: 1.3vw;
+    bottom: 10%;
+    font-family: 'AirBnBM';
+    
+}
+
+.checkoutDate,
+.checkinDate{
+    width: 50%;
+    height: 58px;
+    
+}
+.checkoutDate{
+    border-left:  solid rgba(0, 0, 0,1) 1px;
+}
+
+.guestNumber{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.guestText{
+    height: 30%;
+    font-family: 'AirBnBM';
+    margin-top: 2.5%;
+}
+.guestInput{
+    width: 50%;
+    font-family: 'AirBnB';
+    height: 50%;
+    font-size: 18px;
+    display: inline;
+    border: none;
+    text-align: center;
+    padding-left: 5%;
+}
+
+.reservationButton{
+    background-color: #F21659;
+    height: 13%;
+    margin: 4%;
+    width: 80%;
+    align-self: center;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.reservation{
+    font-family: 'AirBnB';
+    color: white;
+}
+
+.totalPayment{
+    
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+    border-top: solid rgba(0, 0, 0, 0.255) 1px;
+}
+.totalTotal,
+.cashAmount{
+    font-family: 'AirBnB';
+    margin-inline: 10% ;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: AirBnB;
+    src: url('../../fonts/AirbnbCereal_W_Bd.otf');
+}
+@font-face {
+    font-family: AirBnBM;
+    src: url('../../fonts/AirbnbCereal_W_Md.otf');
+}
+@font-face {
+    font-family: AirBnBL;
+    src: url('../fonts/AirbnbCereal_W_Lt.otf');
+}

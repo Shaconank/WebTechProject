@@ -2,13 +2,16 @@ import React from "react";
 import logo from '../../assets/w.png'
 import './Header.css'
 import {SearchCircle, GlobeOutline, PersonCircle, PersonCircleOutline, MenuOutline} from 'react-ionicons'
+import { Link } from "react-router-dom";
 export default function Header({item}){
     return (
         <div className = {'container'}>
+            <Link to={'/Home'} style={{textDecoration : 'none', color: 'inherit'}}>
             <div className="CompanyContainer">
                 <img src = {logo} alt="Logo" className="LogoImage"></img>
                 <p className="CompanyText">wherebnb</p>
             </div>
+            </Link>
             <div className="Nav">
                 <h className = 'anywhere'>Anywhere</h>
                 <div className="line"></div>
