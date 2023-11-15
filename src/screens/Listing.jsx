@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "../components/Header/Header";
 import { useParams } from 'react-router-dom';
-import data from '../../../Img_URLs.json'
+import data from '../../Img_URLs.json'
 import "./Listing.css"
 import { Star, PersonCircleOutline, MedalOutline, ReloadOutline } from 'react-ionicons';
 import {BsDoorOpen,BsWater } from 'react-icons/bs'
