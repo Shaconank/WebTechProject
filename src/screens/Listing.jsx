@@ -3,7 +3,7 @@ import Header from "../components/Header/Header";
 import { useParams } from 'react-router-dom';
 import data from '../../../Img_URLs.json'
 import "./Listing.css"
-import { Star, PersonCircleOutline, MedalOutline } from 'react-ionicons';
+import { Star, PersonCircleOutline, MedalOutline, ReloadOutline } from 'react-ionicons';
 import {BsDoorOpen,BsWater } from 'react-icons/bs'
 console.log("Data:"+ data);
 import { useState, useEffect } from 'react';
@@ -26,7 +26,32 @@ export default function HousePage() {
       setNumberOfGuests(inputValue);
     }
   };
-
+  const handleCheckInDateChange = (e) => {
+    const inputValue = e.target.value;
+  
+    // Parse the input date string to compare
+    const inputDate = new Date(inputValue);
+    const checkOutDateObj = new Date(checkOutDate);
+  
+    // Check if the input date is valid and before the check-out date
+    if (!isNaN(inputDate) && inputDate < checkOutDateObj) {
+      setCheckInDate(inputValue);
+    }
+  };
+  const handleCheckOutDateChange = (e) => {
+    const inputValue = e.target.value;
+  
+    // Parse the input date string to compare
+    const inputDate = new Date(inputValue);
+    const checkOutDateObj = new Date(checkInDate);
+  
+    // Check if the input date is valid and before the check-out date
+    if (!isNaN(inputDate) && inputDate > checkInDateObj) {
+      setCheckInDate(inputValue);
+    }
+  };
+  
+  
   useEffect(() => {
     
     const today = new Date();
@@ -86,21 +111,21 @@ export default function HousePage() {
             </div>
             <div className="coolAmenities">
             <div className="SelfCheckIn">
-              <BsDoorOpen size={'30px'}/>
+              <BsDoorOpen size={'30px'} style = {{position: 'relative', top: '20%'}}/>
               <div className="AmenityText">
               <div className="hostName">Self check-in</div>
               <div className="superHostTimer">You can check in with the building staff.</div>
               </div>
             </div>
             <div className="SuperHost">
-              <MedalOutline height={'30px'} width={'30px'}/>
+              <MedalOutline height={'30px'} width={'30px'} style = {{position: 'relative', top: '20%'}}/>
               <div className="AmenityText">
               <div className="hostName">Host Name is a Super Host</div>
               <div className="superHostTimer">Superhosts are experienced, highly rated Hosts.</div>
               </div>
             </div>
             <div className="DiveRightIn">
-              <BsWater size={'30px'}/>
+              <BsWater size={'30px'} style = {{position: 'relative', top: '20%'}}/>
               <div className="AmenityText">
               <div className="hostName">Dive right in</div>
               <div className="superHostTimer">This is one of the few places in the area with a pool.</div>
@@ -126,7 +151,7 @@ export default function HousePage() {
                     id="checkInDateVal"
                     name="checkInDateVal"
                     value={checkInDate}
-                    onChange={(e) => setCheckInDate(e.target.value)}
+                    onChange={handleCheckInDateChange}
                   />
                 </div>
                 <div className="checkoutDate">
@@ -136,7 +161,7 @@ export default function HousePage() {
                     id="checkOutDateVal"
                     name="checkOutDateVal"
                     value={checkOutDate}
-                    onChange={(e) => setCheckOutDate(e.target.value)}
+                    onChange={handleCheckOutDateChange}
                   />
                 </div>
                 </div>
