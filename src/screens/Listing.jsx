@@ -1,11 +1,9 @@
 import React from 'react'
 import Header from "../components/Header/Header";
 import { useParams } from 'react-router-dom';
-import data from '../../Img_URLs.json'
 import "./Listing.css"
-import { Star, PersonCircleOutline, MedalOutline, ReloadOutline } from 'react-ionicons';
+import { Star, PersonCircleOutline, MedalOutline, ReloadOutline, ConstructOutline } from 'react-ionicons';
 import {BsDoorOpen,BsWater } from 'react-icons/bs'
-console.log("Data:"+ data);
 import { useState, useEffect } from 'react';
 
 
@@ -14,11 +12,24 @@ export default function HousePage() {
   
   
   const { listingid } = useParams();
-  const selectedItem = data.find(item => item.counter == listingid);
   const [checkInDate, setCheckInDate] = useState('');
   const [checkOutDate, setCheckOutDate] = useState('');
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [totalPayment, setTotalPayment] = useState(0);
+  const [selectedItem, setSelectedItem] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/api/getCardData/${listingid}`);
+        const result = await response.json();
+        setSelectedItem(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [listingid]);
   
   const handleInputChange = (e) => {
     const inputValue = parseInt(e.target.value, 10);

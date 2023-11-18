@@ -1,8 +1,7 @@
 import React from 'react'
-import data from '../../../Img_URLs.json'
 import ImageCarousel from '../ListingsCarousel/ListingsCarousel'
 /* import {Link} from 'react-router-dom' */
-export default function Listings() {
+export default function Listings({data}) {
 
   return (
     <div style = {{display: "flex", flexWrap: 'wrap',height:'80vh',}}>

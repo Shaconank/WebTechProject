@@ -8,14 +8,27 @@ import Listings from "../components/Listings/Listings";
 export default function Home() {
   const [marginTop, setMarginTop] = useState("2%");
   const [isSwitchOn, setIsSwitchOn] = useState(false);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    fetchData(); // Fetch data when the component mounts
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/api/getCardData'); 
+      const result = await response.json();
+      
+      setData(result);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
@@ -51,11 +64,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </div>
-        <div className="ListingDiv">
-          <Listings/>
-        </div>
+      <div className="ListingDiv">
+        <Listings data={data} />
+      </div>
     </div>
   );
 }
