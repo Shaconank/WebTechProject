@@ -1,0 +1,102 @@
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'AirBnBL';
+    background-image: url('../../public/sceneryPic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .Login_header{
+    display: flex;
+    height: 15%;
+    align-items: center;
+    font-family: 'AirBnBB';
+    font-size: 10vh;
+  }
+  .Login_header::before {
+    content: "Where";
+    color: black;
+  }
+  
+  .Login_header::after {
+    content: "BnB";
+    color: #ff5a5f;
+  }
+  .login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #333;
+    font-family: 'AirBnB';
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .login-container input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .SignUppasswordBox{
+    position: relative;
+    left: 60px;
+    margin-right: 40px;
+  }
+  .SignUpUsernameBox{
+    margin-left: 55px ;
+  }
+  .repeatPasswordBox{
+    margin-left: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #ff5a5f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff3338;
+  }
+
+  
+@font-face {
+    font-family: AirBnB;
+    src: url('../fonts/AirbnbCereal_W_Bd.otf');
+}
+@font-face {
+    font-family: AirBnBM;
+    src: url('../fonts/AirbnbCereal_W_Md.otf');
+}
+@font-face {
+    font-family: AirBnBL;
+    src: url('../fonts/AirbnbCereal_W_Lt.otf');
+}
+@font-face {
+    font-family: AirBnBB;
+    src: url('../fonts/AirbnbCereal_W_XBd.otf');
+}

@@ -86,17 +86,16 @@
     font-family: 'AirBnB';
     position: relative;
     left: 20%;
-    /* Add the following styles for the line at the bottom */
-    margin-bottom: 20px; /* Adjust this value to control the distance between the content and the line */
+    margin-bottom: 20px; 
 }
 
 .nameRating::after {
     content: '';
     display: block;
-    height: 1px; /* Adjust the thickness of the line */
-    width: 75%; /* Adjust the width of the line */
-    background-color: #000; /* Adjust the color of the line */
-    margin-top: 25px; /* Push the line to the bottom of the container */
+    height: 1px;
+    width: 75%; 
+    background-color: #000; 
+    margin-top: 25px; 
     opacity: 0.2;
 }
 
@@ -117,17 +116,16 @@
     flex-direction: row;
     position: relative;
     left: 19%;
-    margin-bottom:50px ;
-    /* Add the following styles for the line at the bottom */
+    margin-bottom:50px;
     position: relative;
 }
 
 .listingHost::after{
     content: '';
     display: block;
-    width: 75%; /* Adjust the width of the line */
-    height: 1px; /* Adjust the thickness of the line */
-    background-color: #000; /* Adjust the color of the line */
+    width: 75%; 
+    height: 1px; 
+    background-color: #000; 
     position: absolute;
     top: 70px;
     left: 1%;
@@ -162,10 +160,10 @@
 .coolAmenities::after {
     content: '';
     display: block;
-    height: 1px; /* Adjust the thickness of the line */
-    width: 75%; /* Adjust the width of the line */
-    background-color: #000; /* Adjust the color of the line */
-    margin-top: 10px; /* Push the line to the bottom of the container */
+    height: 1px;
+    width: 75%; 
+    background-color: #000; 
+    margin-top: 10px; 
     opacity: 0.2;
     margin-bottom: 30px;
 }
@@ -192,10 +190,10 @@
 .listingDescription::after {
     content: '';
     display: block;
-    height: 1px; /* Adjust the thickness of the line */
-    width: 116%; /* Adjust the width of the line */
-    background-color: #000; /* Adjust the color of the line */
-    margin-top: 30px; /* Push the line to the bottom of the container */
+    height: 1px;
+    width: 116%;
+    background-color: #000; 
+    margin-top: 30px; 
     opacity: 0.2;
     margin-bottom: 30px;
 }
