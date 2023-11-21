@@ -20,7 +20,7 @@ export default function HousePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/getCardData/${listingid}`);
+        const response = await fetch(`/api/CardData/${listingid}`);
         const result = await response.json();
         setSelectedItem(result);
       } catch (error) {

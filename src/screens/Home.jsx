@@ -21,7 +21,7 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('/api/getCardData'); 
+      const response = await fetch('/api/CardData'); 
       const result = await response.json();
       
       setData(result);

@@ -37,7 +37,8 @@ const MakeYourBNB = () => {
     };
    console.log(data)
     try {
-      const response = await fetch('/api/setCardData', {
+      console.log(data)
+      const response = await fetch('/api/CardData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

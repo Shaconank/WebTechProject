@@ -12,6 +12,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(errorHandler)
 
-app.use('/api/GetCardData', require('./routes/CardDataRoutes.cjs'));
+app.use('/api/CardData', require('./routes/CardDataRoutes.cjs'));
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

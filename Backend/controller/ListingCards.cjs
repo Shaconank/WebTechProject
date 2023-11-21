@@ -34,23 +34,28 @@ const setCardData = asyncHandler(async (req, res) => {
       res.status(400).json({ error: 'Please add a text field' });
       return;
     }
+    const latestCard = await Listing.findOne().sort({ counter: -1 }).limit(1);
+    const latestCounter = latestCard ? latestCard.counter : 0;
 
+    // Increment the counter value
+    const newCounter = latestCounter + 1;
+    console.log(req.body)
     const cardData = {
       _id: req.body.text,
-      image1: req.body.image1,
-      image2: req.body.image2,
-      image3: req.body.image3,
-      image4: req.body.image4,
-      image5: req.body.image5,
-      state: req.body.state,
-      distance: req.body.distance,
-      weekend: req.body.weekend,
-      price: req.body.price,
-      counter: req.body.counter,
-      typeStay: req.body.typeStay,
-      name: req.body.name,
+      image1: req.body.listingImage1,
+      image2: req.body.listingImage2,
+      image3: req.body.listingImage3,
+      image4: req.body.listingImage4,
+      image5: req.body.listingImage5,
+      state: req.body.listingState,
+      distance: req.body.listingDistance,
+      weekend: req.body.listingWeekend,
+      price: req.body.listingPrice,
+      counter: newCounter,
+      typeStay: req.body.listingTypeStay,
+      name: req.body.ownerName,
     };
-
+    console.log(cardData)
     const newListing = await Listing.create(cardData);
 
     res.status(201).json({ message: 'Data set successfully', data: newListing });
