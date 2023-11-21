@@ -6,7 +6,7 @@ import './MakeYourBNB.css'; // Import your CSS file for styling
 
 const MakeYourBNB = () => {
   const [ownerName, setOwnerName] = useState('');
-  const [listingPrice, setListingPrice] = useState('');
+  const [listingPrice, setListingPrice] = useState();
   const [listingState, setListingState] = useState('');
   const [listingTypeStay, setListingTypeStay] = useState('');
   const [listingImage1, setListingImage1] = useState('');
@@ -18,10 +18,41 @@ const MakeYourBNB = () => {
   const [listingDistance,setListingDistance] = useState('200');
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  async (e) => {
     e.preventDefault();
     
     console.log('Submitted:', { ownerName, listingPrice, listingTypeStay, listingState, listingImage1, listingImage2, listingImage3, listingImage4, listingImage5,listingWeekend,listingDistance});
+    const data = {
+      ownerName,
+      listingPrice,
+      listingTypeStay,
+      listingState,
+      listingImage1,
+      listingImage2,
+      listingImage3,
+      listingImage4,
+      listingImage5,
+      listingWeekend,
+      listingDistance,
+    };
+   console.log(data)
+    try {
+      const response = await fetch('/api/setCardData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        console.log('Property listed successfully');
+      } else {
+        console.error(`Failed to list property ${response.ok}`);
+      }
+    } catch (error) {
+      console.error('Error listing property:', error);
+    }
     
   };
 
@@ -44,7 +75,7 @@ const MakeYourBNB = () => {
           <div className="form-group">
             <label htmlFor="listingPrice">Listing Price:</label>
             <input
-              type="text"
+              type="number"
               id="listingPrice"
               value={listingPrice}
               onChange={(e) => setListingPrice(e.target.value)}
