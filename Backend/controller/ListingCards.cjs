@@ -5,6 +5,7 @@ const Listing = require('../models/cardModel.cjs');
 
 const getCardData = asyncHandler(async (req, res) => {
   const Cards = await Listing.find({});
+  console.log(Cards);
   res.status(200).json(Cards);
 });
 

@@ -7,6 +7,7 @@ import ErrorPage from './screens/NotFoundPage';
 import Listing from './screens/Listing';
 import LoginPage from './screens/Login';
 import SignUpPage from './screens/SignUp';
+import MakeYourBNB from './screens/MakeYourBNB'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
     path: '/SignUp',
     element: <SignUpPage/>,
     errorElement: <ErrorPage/>
+  },
+  {
+    path: '/MakeYourBNB',
+    element: <MakeYourBNB/>,
+    errorElement: <ErrorPage />,
   }
 ])
 ReactDOM.createRoot(document.getElementById("root")).render(
